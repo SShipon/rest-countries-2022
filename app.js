@@ -1,8 +1,10 @@
- const loadCountries = () => {
+// rest api load data in rest api site  
+const loadCountries = () => {
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       .then((data) => displayCountries(data));
 }
+// data display create data 
 const displayCountries = countries  => {
     console.log(countries[0])
     const countriesHtml =countries.map((country) => getCountries(country));
@@ -12,7 +14,7 @@ const displayCountries = countries  => {
     
    
 }
- //option - 3
+ //option - 3 Ui design 
 const getCountries = ({name,flags,capital}) => {
  // const { name, flags, capital } = country;
   return `
